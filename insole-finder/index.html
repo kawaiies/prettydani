@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insole Finder - Currex Blog</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="/css/style.css">
+  
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></head>
+<body>
+  <div class="announcement-bar">
+    <p>Welcome to Currex Blog - Share insights, stories, and ideas</p>
+  </div>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="header-left">
+        <a href="/" class="site-logo">Currex <span>Blog</span></a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            
+            <li class="active">
+              <a href="/">Home</a>
+            </li>
+            
+            <li class="">
+              <a href="/blog">Blog</a>
+            </li>
+            
+            <li class="">
+              <a href="/about">About</a>
+            </li>
+            
+            <li class="">
+              <a href="/contact">Contact</a>
+            </li>
+            
+            <li class="">
+              <a href="/insole-finder">Insole Finder</a>
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+      <div class="header-right">
+        <a href="/blog" class="header-action" title="Search">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </a>
+        
+      </div>
+    </div>
+  </header>
+  <main class="main-content">
+    <div class="content-wrapper ">
+      
+      <div class="main-area">
+      
+
+<section class="page-header">
+  <div class="container">
+    <h1>Insole Finder</h1>
+  </div>
+</section>
+<section class="page-content">
+  <div class="container">
+    <div class="content-body">
+      <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+.insole-finder-page{font-family:Montserrat,sans-serif;color:#464646;max-width:900px;margin:0 auto;padding:2rem 0}
+.insole-finder-page h2{font-family:Montserrat,sans-serif;font-weight:500;text-align:center;font-size:32px;color:#000;margin-top:2.5rem;margin-bottom:1rem;letter-spacing:.05em}
+.insole-finder-page .subtitle{text-align:center;font-size:16px;color:#666;max-width:680px;margin:0 auto 2.5rem}
+#if-quiz{background:#fff;border:1px solid #e5e5e5;border-radius:8px;padding:2.5rem;margin:2rem auto;max-width:650px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+#if-progress{display:flex;justify-content:center;gap:8px;margin-bottom:2rem}
+#if-progress .dot{width:10px;height:10px;border-radius:50%;background:#e0e0e0;transition:background .3s}
+#if-progress .dot.active{background:#000}
+#if-progress .dot.done{background:#A98C61}
+#if-question{font-family:Montserrat,sans-serif;font-size:20px;font-weight:500;color:#000;text-align:center;margin-bottom:1rem;white-space:pre-line}
+#question-sub{font-size:14px;color:#888;text-align:center;margin-bottom:1.5rem}
+#if-options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.5rem}
+#if-options.one-col{grid-template-columns:1fr}
+#if-options .opt{border:1.5px solid #e0e0e0;border-radius:6px;padding:14px 16px;text-align:center;cursor:pointer;font-size:14px;font-weight:500;color:#464646}
+#if-options .opt:hover{border-color:#000}
+#if-options .opt.selected{border-color:#000;background:#000;color:#fff}
+#if-star-options{display:flex;justify-content:center;gap:20px;margin-bottom:1.5rem;flex-wrap:wrap}
+#if-star-options .star-opt{border:1.5px solid #e0e0e0;border-radius:6px;padding:16px 28px;text-align:center;cursor:pointer;font-size:14px;min-width:100px}
+#if-star-options .star-opt .label{font-weight:600;color:#000;display:block;margin-bottom:4px}
+#if-star-options .star-opt .desc{font-size:12px;color:#888}
+#if-star-options .star-opt:hover{border-color:#000}
+#if-star-options .star-opt.selected{border-color:#000;background:#000}
+#if-star-options .star-opt.selected .label{color:#fff}
+#if-star-options .star-opt.selected .desc{color:rgba(255,255,255,.7)}
+#if-nav{display:flex;justify-content:space-between;margin-top:1.5rem}
+#if-nav button{font-family:Montserrat,sans-serif;background:#000;color:#fff;border:none;border-radius:50px;padding:12px 32px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.15em;cursor:pointer}
+#if-nav button:hover{background:#333}
+#if-nav button:disabled{background:#ccc;cursor:not-allowed}
+#if-nav button.back{background:transparent;color:#464646;border:1px solid #ccc}
+#if-nav button.back:hover{border-color:#000}
+#if-results{text-align:center;padding:1rem 0}
+#if-results h3{font-family:Montserrat,sans-serif;font-size:24px;font-weight:500;color:#000;margin-bottom:.5rem}
+#if-results .rec-product{font-size:28px;font-weight:700;color:#000;margin:1rem 0}
+#if-results .rec-detail{font-size:15px;color:#464646;line-height:1.6}
+#if-results .rec-arch{font-size:14px;color:#888;margin-top:.5rem}
+#if-results .btn-shop{display:inline-block;background:#000;color:#fff;text-decoration:none;border-radius:50px;padding:14px 40px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.15em;margin-top:1rem}
+#if-results .btn-shop:hover{background:#333}
+#if-results .retake{display:inline-block;margin-top:1rem;cursor:pointer;font-size:13px;color:#888;text-decoration:underline}
+.insole-finder-page .how-it-works{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:2rem auto;max-width:780px}
+@media(max-width:40em){.insole-finder-page .insole-finder-page .how-it-works{grid-template-columns:1fr}}
+.insole-finder-page .how-it-works p{font-size:15px;line-height:1.6;color:#464646}
+.insole-finder-page .final-cta{text-align:center;margin-top:3rem}
+.insole-finder-page .final-cta p{font-size:15px;line-height:1.6;color:#464646;max-width:680px;margin:.5rem auto}</style><h2 style="text-align:center">Find Your Insole with the CURREX® Insole Finder</h2><p class="subtitle">Need help finding which CURREX insole is right for you? Answer six quick questions to find your perfect match.</p><div id="if-quiz"><div id="if-progress"><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div><div id="if-question"></div><div id="question-sub" class="subtitle"></div><div id="if-options"></div><div id="if-star-options"></div><div id="if-results" style="display:none"></div><div id="if-nav"><button class="back" id="if-back" style="visibility:hidden">Back</button><button id="if-next">Continue</button></div></div><script>(function(){var Q=document.getElementById('if-question');var O=document.getElementById('if-options');var S=document.getElementById('if-star-options');var R=document.getElementById('if-results');var P=document.getElementById('if-progress');var NB=document.getElementById('if-next');var BB=document.getElementById('if-back');var step=0,ans={};var prods={};prods["Running"]="RUNPRO";prods["Trail Running / Hiking"]="HIKEPRO";prods["Soccer / Football"]="CLEATPRO";prods["Basketball"]="BASKETBALLPRO";prods["Pickleball"]="PICKLEBALLPRO";prods["Tennis"]="ACEPRO";prods["Golf"]="GOLFPRO";prods["Cycling"]="BIKEPRO";prods["Winter Sports"]="EDGEPRO";prods["Everyday / Walking"]="SUPPORTSTP";prods["Multi-Sport / Gym"]="RUNPRO";var pUrl={};pUrl["Running"]="https://currex.com/products/runpro";pUrl["Trail Running / Hiking"]="https://currex.com/products/hikepro";pUrl["Soccer / Football"]="https://currex.com/products/cleatpro";pUrl["Basketball"]="https://currex.com/products/basketballpro";pUrl["Pickleball"]="https://currex.com/products/pickleballpro";pUrl["Tennis"]="https://currex.com/products/acepro";pUrl["Golf"]="https://currex.com/products/golfpro";pUrl["Cycling"]="https://currex.com/products/bikepro";pUrl["Winter Sports"]="https://currex.com/products/edgepro";pUrl["Everyday / Walking"]="https://currex.com/collections/everyday/products/supportstp";pUrl["Multi-Sport / Gym"]="https://currex.com/products/runpro";var pDesc={};pDesc["Running"]="Engineered for runners seeking comfort and efficiency.";pDesc["Trail Running / Hiking"]="Enhanced stability for uneven terrain.";pDesc["Soccer / Football"]="Low-volume fit and lateral support for cleated sports.";pDesc["Basketball"]="Optimized for jumping, cutting, and court movement.";pDesc["Pickleball"]="Tailored for quick lateral court movements.";pDesc["Tennis"]="Built for multidirectional tennis movement.";pDesc["Golf"]="Stability for rotational swing and walking.";pDesc["Cycling"]="Improved power transfer and pedal efficiency.";pDesc["Winter Sports"]="Built for skiing, snowboarding, skating.";pDesc["Everyday / Walking"]="All-day comfort for daily activity.";pDesc["Multi-Sport / Gym"]="Versatile performance for training.";var Qs=[{q:"What sport or activity do you do?",opts:["Running", "Trail Running / Hiking", "Soccer / Football", "Basketball", "Pickleball", "Tennis", "Golf", "Cycling", "Winter Sports", "Everyday / Walking", "Multi-Sport / Gym"]},{q:"What type of shoes do you wear?",opts:["Running Shoes", "Cleats / Spikes", "Court Shoes", "Hiking Boots", "Cycling Shoes", "Casual Sneakers", "Work Boots", "Golf Shoes", "Basketball Shoes"]},{q:"What is your main goal?",opts:["Comfort & Cushioning", "Better Performance", "Injury Prevention", "All-Day Support", "Stability & Balance", "Reduce Foot Fatigue"]},{q:"What foot type do you have?",sub:"If you don't know your foot type, we recommend you take a step back and go through the analysis.",star:true,opts:[{label:"High Arch",desc:''},{label:"Medium Arch",desc:''},{label:"Low Arch",desc:''},{label:"Flat Arch",desc:''},]},{q:"What is your leg axis?",sub:"Stand up straight and bring your legs together.",star:true,opts:[{label:"Angled Out",desc:''},{label:"Straight Leg",desc:''},{label:"Angled In",desc:''},]},{q:"What is your US shoe size?",opts:["Men 4-6 / Women 5-7", "Men 7-9 / Women 8-10", "Men 10-12 / Women 11-13", "Men 13-16"]}];Qs[3].opts=[{label:'High Arch',desc:'High instep, often supinate'},{label:'Medium Arch',desc:'Normal arch, neutral stride'},{label:'Low Arch',desc:'Flat feet, often overpronate'},{label:'Flat Arch',desc:'Very low arch, significant overpronation'}];Qs[4].opts=[{label:'Angled Out',desc:'Knees point outward'},{label:'Straight Leg',desc:'Knees and ankles align'},{label:'Angled In',desc:'Knees point inward'}];var footLbl=['High Arch','Medium Arch','Low Arch','Flat Arch'];var legLbl=['Angled Out','Straight Leg','Angled In'];function r(){if(step===6){showR();return;}var q=Qs[step];P.querySelectorAll('.dot').forEach(function(d,i){d.className='dot';if(i===step)d.classList.add('active');else if(i<step)d.classList.add('done');});Q.textContent=q.q;var sub=document.getElementById('question-sub');if(sub)sub.textContent=q.sub||'';S.style.display='none';O.style.display='';if(q.star){O.style.display='none';S.style.display='';S.innerHTML='';q.opts.forEach(function(o,i){var d=document.createElement('div');d.className='star-opt'+(ans[step]===i?' selected':'');d.innerHTML='<span class=label>'+o.label+'</span><span class=desc>'+o.desc+'</span>';d.onclick=function(){ans[step]=i;r();};S.appendChild(d);});}else{O.className=q.opts.length<=3?'one-col':'';O.innerHTML='';q.opts.forEach(function(o,i){var d=document.createElement('div');d.className='opt'+(ans[step]===i?' selected':'');d.textContent=o;d.onclick=function(){ans[step]=i;r();};O.appendChild(d);});}BB.style.visibility=step===0?'hidden':'visible';NB.textContent=step===5?'Find My Insole':'Continue';NB.disabled=ans[step]===undefined;}function showR(){P.style.display='none';Q.style.display='none';O.style.display='none';S.style.display='none';var se=document.getElementById('question-sub');if(se)se.style.display='none';BB.style.display='none';NB.style.display='none';R.style.display='';var sport=Qs[0].opts[ans[0]||0];var arch=footLbl[Math.min(ans[3]||1,3)];var leg=legLbl[ans[4]||1];var pn=prods[sport]||'RUNPRO',pu=pUrl[sport]||'https://currex.com/products/runpro',pd=pDesc[sport]||'Versatile performance.';var archFit=arch.toLowerCase().replace('flat arch','low arch');R.innerHTML='<h3>We Recommend</h3><div class=rec-product>'+pn+'</div><div class=rec-detail>'+pd+'</div><div class=rec-arch>Foot Type: <strong>'+arch+'</strong> | Leg Axis: <strong>'+leg+'</strong></div><div class=rec-arch style=font-size:13px;color:#999;margin-top:.3rem;>Choose the '+archFit+' version for your fit.</div><a href="'+pu+'" class=btn-shop target=_blank>Shop Now</a><br><span class=retake onclick=location.reload()>Retake Quiz</span>';}NB.addEventListener('click',function(){if(ans[step]!==undefined&&step<6){step++;r();}});BB.addEventListener('click',function(){if(step>0){step--;r();}});r();})();</script><div class="how-it-works"><div><p>CURREX dynamic insoles were specifically engineered for the unique demands of individual sports. Our insole finder compiles years of research into <strong>six simple questions</strong> to help you find the right insoles.</p></div><div><p>During the insole finder quiz, you will <strong>choose your sport and activity</strong>, tell us about <strong>your foot type and leg axis</strong>. We'll match you with the perfect CURREX insole for your needs.</p></div></div><div class="final-cta"><h2>What Insoles Do I Need? Take the Quiz &amp; Find Out!</h2><p>Whether you're a runner chasing a PR or someone who spends all day on their feet, CURREX has the right insole for you.</p></div>
+    </div>
+  </div>
+</section>
+      
+      </div>
+      <aside class="sidebar">
+        
+
+
+<div class="sidebar-widget widget-search">
+  
+  <h3>Search</h3>
+  <form action="/blog" method="get" class="sidebar-search">
+    <input type="text" name="tag" placeholder="Search by tag..." />
+    <button type="submit"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
+  </form>
+  
+</div>
+
+
+<div class="sidebar-widget widget-recent-posts">
+  
+  <h3>Recent Posts</h3>
+  <ul class="recent-posts-list">
+    
+    
+    
+    <li>
+      <a href="/blog/couch-to-5k-training-plan-a-smarter-way-to-start-running">Couch to 5K Training Plan: A Smarter Way to Start Running</a>
+      <span class="post-date">2026/6/16</span>
+    </li>
+    
+    
+    <li>
+      <a href="/blog/finding-the-best-insoles-for-your-sport-with-currex">Finding the Best Insoles for Your Sport with CURREX</a>
+      <span class="post-date">2026/6/16</span>
+    </li>
+    
+    
+    <li>
+      <a href="/blog/test-easymde">Test EasyMDE</a>
+      <span class="post-date">2026/6/16</span>
+    </li>
+    
+    
+    <li>
+      <a href="/blog/test-featured-image">Test Featured Image</a>
+      <span class="post-date">2026/6/16</span>
+    </li>
+    
+    
+    <li>
+      <a href="/blog/test-tinymce">Test TinyMCE</a>
+      <span class="post-date">2026/6/16</span>
+    </li>
+    
+  </ul>
+  
+</div>
+
+
+<div class="sidebar-widget widget-categories">
+  
+  <h3>Categories</h3>
+  <ul class="category-list">
+    
+    
+    
+    <li>
+      <a href="/blog?category=Announcement">Announcement</a>
+      <span class="count">(2)</span>
+    </li>
+    
+    
+    <li>
+      <a href="/blog?category=Guide">Guide</a>
+      <span class="count">(3)</span>
+    </li>
+    
+    
+    <li>
+      <a href="/blog?category=News">News</a>
+      <span class="count">(3)</span>
+    </li>
+    
+    
+    <li>
+      <a href="/blog?category=Review">Review</a>
+      <span class="count">(1)</span>
+    </li>
+    
+    
+    <li>
+      <a href="/blog?category=Tutorial">Tutorial</a>
+      <span class="count">(1)</span>
+    </li>
+    
+  </ul>
+  
+</div>
+
+
+<div class="sidebar-widget widget-text">
+  
+  <h3>About</h3>
+  <p>Welcome to Currex Blog! We share insights, tips, and stories on topics that matter. Stay tuned for regular updates.</p>
+  
+</div>
+
+
+<div class="sidebar-widget widget-tags">
+  
+  <h3>Tags</h3>
+  <div class="tag-cloud">
+    
+    
+    
+    <a href="/blog?tag=accessibility" class="tag">accessibility</a>
+    
+    
+    <a href="/blog?tag=blog" class="tag">blog</a>
+    
+    
+    <a href="/blog?tag=design" class="tag">design</a>
+    
+    
+    <a href="/blog?tag=easymde" class="tag">easymde</a>
+    
+    
+    <a href="/blog?tag=editor" class="tag">editor</a>
+    
+    
+    <a href="/blog?tag=introduction" class="tag">introduction</a>
+    
+    
+    <a href="/blog?tag=lifestyle" class="tag">lifestyle</a>
+    
+    
+    <a href="/blog?tag=markdown" class="tag">markdown</a>
+    
+    
+    <a href="/blog?tag=productivity" class="tag">productivity</a>
+    
+    
+    <a href="/blog?tag=test" class="tag">test</a>
+    
+    
+    <a href="/blog?tag=tinymce" class="tag">tinymce</a>
+    
+    
+    <a href="/blog?tag=tips" class="tag">tips</a>
+    
+    
+    <a href="/blog?tag=tutorial" class="tag">tutorial</a>
+    
+    
+    <a href="/blog?tag=web" class="tag">web</a>
+    
+    
+    <a href="/blog?tag=welcome" class="tag">welcome</a>
+    
+    
+    <a href="/blog?tag=writing" class="tag">writing</a>
+    
+  </div>
+  
+</div>
+
+
+      </aside>
+      
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h3>Currex <span>Blog</span></h3>
+          <p>A modern blog platform for sharing ideas and stories.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="Pinterest">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.84 3.14 8.95 7.5 10.45-.1-.79-.2-1.99.04-2.85.22-.78 1.42-5.99 1.42-5.99s-.36-.72-.36-1.78c0-1.67.97-2.92 2.18-2.92 1.03 0 1.53.77 1.53 1.7 0 1.03-.66 2.58-1 4.01-.3 1.2.6 2.18 1.78 2.18 2.14 0 3.78-2.25 3.78-5.5 0-2.88-2.07-4.89-5.02-4.89-3.42 0-5.43 2.57-5.43 5.22 0 1.03.4 2.14.9 2.74.1.12.11.22.08.34l-.34 1.36c-.05.22-.18.26-.42.16-1.57-.73-2.55-3.02-2.55-4.86 0-3.96 2.87-7.6 8.3-7.6 4.36 0 7.74 3.1 7.74 7.25 0 4.32-2.73 7.8-6.52 7.8-1.27 0-2.47-.66-2.88-1.44l-.78 2.98c-.28 1.08-1.04 2.44-1.55 3.26C9.64 21.73 10.8 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            
+            <li><a href="#">Documentation</a></li>
+            
+            <li><a href="#">FAQs</a></li>
+            
+            <li><a href="#">Support</a></li>
+            
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            
+            <li><a href="/about">About Us</a></li>
+            
+            <li><a href="/privacy">Privacy Policy</a></li>
+            
+            <li><a href="/terms">Terms of Service</a></li>
+            
+            <li><a href="/contact">Contact Us</a></li>
+            
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Subscribe</h4>
+          <p>Stay updated with our latest news and posts.</p>
+          <form class="subscribe-form" action="#" method="post">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Currex Blog. All rights reserved.</p>
+        <ul class="footer-bottom-links">
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>
+
