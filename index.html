@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionHub - 时尚服装鞋帽商城</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部通知栏 -->
+    <div class="announcement-bar">
+        <p>🎉 新品上市！全场满299减50，更有会员专享折扣 → <a href="#promo">立即查看</a></p>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <h1>Fashion<span>Hub</span></h1>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li class="nav-item has-dropdown">
+                        <a href="#clothing">服装 <span class="arrow">▾</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#men">男士服装</a>
+                            <a href="#women">女士服装</a>
+                            <a href="#kids">儿童服装</a>
+                            <a href="#sports">运动服装</a>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#shoes">鞋类 <span class="arrow">▾</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#sneakers">运动鞋</a>
+                            <a href="#boots">靴子</a>
+                            <a href="#sandals">凉鞋</a>
+                            <a href="#formal">正装鞋</a>
+                        </div>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#accessories">配饰 <span class="arrow">▾</span></a>
+                        <div class="dropdown-menu">
+                            <a href="#hats">帽子</a>
+                            <a href="#bags">包包</a>
+                            <a href="#jewelry">首饰</a>
+                            <a href="#belts">皮带</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#new">新品上市</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sale">促销活动</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="搜索商品...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <a href="#account" class="nav-icon" title="我的账户">👤</a>
+                <a href="#cart" class="nav-icon cart-icon" title="购物车">
+                    🛒
+                    <span class="cart-count">3</span>
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <!-- 轮播图 -->
+    <section class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <span class="slide-tag">新品首发</span>
+                        <h2>2026春季新品</h2>
+                        <p>精选优质面料，时尚与舒适并存</p>
+                        <a href="#new" class="btn-primary">立即选购 →</a>
+                    </div>
+                    <div class="slide-image">
+                        <div class="placeholder-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <span>春季新品系列</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <span class="slide-tag">限时特惠</span>
+                        <h2>运动鞋专场</h2>
+                        <p>精选运动鞋低至5折，限时3天</p>
+                        <a href="#sale" class="btn-primary">查看优惠 →</a>
+                    </div>
+                    <div class="slide-image">
+                        <div class="placeholder-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <span>运动鞋促销活动</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="slide-content">
+                    <div class="slide-text">
+                        <span class="slide-tag">品牌联名</span>
+                        <h2>设计师联名系列</h2>
+                        <p>独家设计，限量发售</p>
+                        <a href="#designer" class="btn-primary">探索更多 →</a>
+                    </div>
+                    <div class="slide-image">
+                        <div class="placeholder-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <span>设计师联名款</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn prev" onclick="changeSlide(-1)">‹</button>
+            <button class="carousel-btn next" onclick="changeSlide(1)">›</button>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 商品分类 -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <h2 class="section-title">购物分类</h2>
+            <p class="section-subtitle">按类别浏览我们的精选商品</p>
+            <div class="categories-grid">
+                <a href="#clothing" class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <span>👔</span>
+                    </div>
+                    <h3>服装</h3>
+                    <p>男士、女士、儿童服装</p>
+                </a>
+                <a href="#shoes" class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <span>👟</span>
+                    </div>
+                    <h3>鞋类</h3>
+                    <p>运动鞋、靴子、凉鞋</p>
+                </a>
+                <a href="#hats" class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <span>🧢</span>
+                    </div>
+                    <h3>帽子</h3>
+                    <p>棒球帽、渔夫帽、贝雷帽</p>
+                </a>
+                <a href="#accessories" class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <span>👜</span>
+                    </div>
+                    <h3>配饰</h3>
+                    <p>包包、首饰、皮带</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 热门商品展示 -->
+    <section class="products-section" id="hot-products">
+        <div class="container">
+            <h2 class="section-title">热门商品</h2>
+            <p class="section-subtitle">最受顾客喜爱的精选单品</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <span>时尚外套</span>
+                        </div>
+                        <span class="product-badge hot">热销</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>春季修身外套</h3>
+                        <p class="product-category">男士服装</p>
+                        <div class="product-price">
+                            <span class="price-current">¥299</span>
+                            <span class="price-original">¥399</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(128)</span>
+                        </div>
+                        <button class="btn-add-cart">加入购物车</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <span>运动鞋</span>
+                        </div>
+                        <span class="product-badge new">新品</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>轻量缓震运动鞋</h3>
+                        <p class="product-category">运动鞋</p>
+                        <div class="product-price">
+                            <span class="price-current">¥459</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(86)</span>
+                        </div>
+                        <button class="btn-add-cart">加入购物车</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <span>连衣裙</span>
+                        </div>
+                        <span class="product-badge sale">特价</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>碎花雪纺连衣裙</h3>
+                        <p class="product-category">女士服装</p>
+                        <div class="product-price">
+                            <span class="price-current">¥199</span>
+                            <span class="price-original">¥299</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(215)</span>
+                        </div>
+                        <button class="btn-add-cart">加入购物车</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                            <span>棒球帽</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>潮流棒球帽</h3>
+                        <p class="product-category">帽子</p>
+                        <div class="product-price">
+                            <span class="price-current">¥89</span>
+                            <span class="price-original">¥129</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(67)</span>
+                        </div>
+                        <button class="btn-add-cart">加入购物车</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                            <span>背包</span>
+                        </div>
+                        <span class="product-badge hot">热销</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>时尚双肩背包</h3>
+                        <p class="product-category">包包</p>
+                        <div class="product-price">
+                            <span class="price-current">¥259</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-count">(173)</span>
+                        </div>
+                        <button class="btn-add-cart">加入购物车</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="placeholder-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                            <span>休闲鞋</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>舒适休闲皮鞋</h3>
+                        <p class="product-category">正装鞋</p>
+                        <div class="product-price">
+                            <span class="price-current">¥389</span>
+                            <span class="price-original">¥499</span>
+                        </div>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-count">(94)</span>
+                        </div>
+                        <button class="btn-add-cart">加入购物车</button>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-container">
+                <a href="#all-products" class="btn-secondary">查看全部商品 →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 促销活动区域 -->
+    <section class="promo-section" id="promo">
+        <div class="container">
+            <h2 class="section-title">促销活动</h2>
+            <p class="section-subtitle">限时优惠，不容错过</p>
+            <div class="promo-grid">
+                <div class="promo-card promo-large">
+                    <div class="promo-content">
+                        <span class="promo-tag">限时特惠</span>
+                        <h3>春夏清仓大促</h3>
+                        <p>精选春夏款式低至3折，售完即止</p>
+                        <div class="promo-timer">
+                            <div class="timer-item">
+                                <span class="timer-number" id="days">02</span>
+                                <span class="timer-label">天</span>
+                            </div>
+                            <div class="timer-item">
+                                <span class="timer-number" id="hours">18</span>
+                                <span class="timer-label">时</span>
+                            </div>
+                            <div class="timer-item">
+                                <span class="timer-number" id="minutes">45</span>
+                                <span class="timer-label">分</span>
+                            </div>
+                            <div class="timer-item">
+                                <span class="timer-number" id="seconds">30</span>
+                                <span class="timer-label">秒</span>
+                            </div>
+                        </div>
+                        <a href="#sale" class="btn-primary">立即抢购 →</a>
+                    </div>
+                    <div class="promo-image">
+                        <div class="placeholder-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <span>春夏清仓</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="promo-card promo-small">
+                    <div class="promo-content">
+                        <span class="promo-tag">会员专享</span>
+                        <h3>新会员注册礼</h3>
+                        <p>注册即送50元优惠券</p>
+                        <a href="#register" class="btn-secondary">注册领取 →</a>
+                    </div>
+                </div>
+
+                <div class="promo-card promo-small">
+                    <div class="promo-content">
+                        <span class="promo-tag">满减优惠</span>
+                        <h3>满299减50</h3>
+                        <p>全场商品适用，可叠加使用</p>
+                        <a href="#shop" class="btn-secondary">去购物 →</a>
+                    </div>
+                </div>
+
+                <div class="promo-card promo-small">
+                    <div class="promo-content">
+                        <span class="promo-tag">品牌日</span>
+                        <h3>Nike专场</h3>
+                        <p>精选Nike商品7折起</p>
+                        <a href="#nike" class="btn-secondary">查看详情 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌优势 -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🚚</div>
+                    <h3>免费配送</h3>
+                    <p>订单满199元全国包邮</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔄</div>
+                    <h3>7天无理由退换</h3>
+                    <p>放心购物，无忧退换</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💯</div>
+                    <h3>正品保证</h3>
+                    <p>100%正品，假一赔十</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💳</div>
+                    <h3>安全支付</h3>
+                    <p>多种支付方式，安全可靠</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 客户评价 -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">客户评价</h2>
+            <p class="section-subtitle">看看我们的顾客怎么说</p>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"质量非常好，面料柔软舒适，尺码标准，物流也很快。已经推荐给朋友了！"</p>
+                    <div class="review-author">
+                        <strong>张***</strong>
+                        <span>购买了我心外套</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"鞋子很舒服，走路不累脚，外观设计也很时尚，性价比很高。"</p>
+                    <div class="review-author">
+                        <strong>李***</strong>
+                        <span>购买了运动鞋</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★☆</div>
+                    <p class="review-text">"连衣裙很漂亮，就是洗了有点掉色，不过这个价位已经很值了。"</p>
+                    <div class="review-author">
+                        <strong>王***</strong>
+                        <span>购买了连衣裙</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Fashion<span>Hub</span></h3>
+                    <p>时尚服装鞋帽商城，为您精选优质商品，打造完美穿搭。</p>
+                    <div class="social-links">
+                        <a href="#" title="微信">💬</a>
+                        <a href="#" title="微博">📱</a>
+                        <a href="#" title="抖音">🎵</a>
+                        <a href="#" title="小红书">📕</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>购物指南</h4>
+                    <ul>
+                        <li><a href="#how-to-buy">如何购买</a></li>
+                        <li><a href="#payment">支付方式</a></li>
+                        <li><a href="#shipping">配送说明</a></li>
+                        <li><a href="#returns">退换政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#about">品牌故事</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                        <li><a href="#careers">招聘信息</a></li>
+                        <li><a href="#privacy">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>客户服务</h4>
+                    <ul>
+                        <li><a href="#faq">常见问题</a></li>
+                        <li><a href="#size-guide">尺码指南</a></li>
+                        <li><a href="#track-order">订单跟踪</a></li>
+                        <li><a href="#feedback">意见反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FashionHub. 保留所有权利。</p>
+                <div class="payment-icons">
+                    <span>💳</span>
+                    <span>💰</span>
+                    <span>📱</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
